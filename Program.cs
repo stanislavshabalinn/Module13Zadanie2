@@ -32,7 +32,7 @@ class Program
 
         Console.WriteLine("10 слов, встречающихся в тексте чаще всего:\n");
 
-        var numberWords = dictionary.OrderByDescending(n => n.Value).Take(10);
+        var numberWords = dictionary.OrderByDescending(n => n.Value).Take(10); //Значения по убыванию
         int i = 1;
         foreach (var item in numberWords)
         {
@@ -40,11 +40,11 @@ class Program
             var lastDigit = digit.Substring(digit.Length - 1);
             if (lastDigit == "2" || lastDigit == "3" || lastDigit == "4")
             {
-                Console.WriteLine($"{i}.Слово\"{item.Key}\" \t - {item.Value} раза;");
+                Console.WriteLine($"{i}.Слово\"{item.Key}\" \t - {item.Value} раза;"); // Окончание для 2,3,4
             }
             else
             {
-                Console.WriteLine($"{i}.Слово\"{item.Key}\" \t - {item.Value} раз;");
+                Console.WriteLine($"{i}.Слово\"{item.Key}\" \t - {item.Value} раз;"); // Окончание для 1,5,6,7,8,9,10
             }
             i++;
         }
